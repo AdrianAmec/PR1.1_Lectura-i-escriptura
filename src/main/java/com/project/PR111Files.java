@@ -30,7 +30,9 @@ public class PR111Files {
         File fitxer= new File(camiFitxer);
        
             try {
+                
                  if(!fitxer.exists()){
+
                     if(!fitxer.mkdirs()){
                         return;
                     }

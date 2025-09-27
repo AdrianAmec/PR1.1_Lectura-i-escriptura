@@ -33,8 +33,10 @@ public class PR113append {
             // asegurarse que exista data
             Files.createDirectories(path.getParent());
 
+            //lineSeparator es como "\n" pero sirve para otras OS 
             String contenido= System.lineSeparator()+String.join(System.lineSeparator(),frases);
 
+            
             Files.writeString(path, contenido, StandardCharsets.UTF_8,StandardOpenOption.CREATE,StandardOpenOption.APPEND);
             
             System.out.println("Frases agregadas con exito");
